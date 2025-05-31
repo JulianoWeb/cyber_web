@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Crawler de Links</h2>
+<form method="post">
+    <div class="form-group">
+        <label for="url">URL:</label>
+        <input type="text" class="form-control" id="url" name="url" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Coletar Links</button>
+</form>
+{% if links %}
+    <div class="mt-4">
+        <h4>Links Encontrados:</h4>
+        <ul>
+            {% for link in links %}
+                <li><a href="{{ link }}" target="_blank">{{ link }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Buscar Informações de um CEP</h2>
+<form method="post">
+    <div class="form-group">
+        <label for="cep">CEP:</label>
+        <input type="text" class="form-control" id="cep" name="cep" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+{% if data %}
+    {% if data.erro %}
+        <div class="mt-4 alert alert-danger">{{ data.erro }}</div>
+    {% else %}
+        <div class="mt-4">
+            <p><strong>Logradouro:</strong> {{ data.logradouro }}</p>
+            <p><strong>Bairro:</strong> {{ data.bairro }}</p>
+            <p><strong>Cidade:</strong> {{ data.localidade }}</p>
+            <p><strong>Estado:</strong> {{ data.uf }}</p>
+        </div>
+    {% endif %}
+{% endif %}
+{% endblock %}

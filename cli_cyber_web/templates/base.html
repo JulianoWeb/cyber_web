@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber CLI Web</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">Cyber CLI Web</h1>
+        <nav class="mb-4">
+            <a href="/" class="btn btn-primary">Início</a>
+            <a href="/status" class="btn btn-secondary">Verificar Status</a>
+            <a href="/cep" class="btn btn-secondary">Buscar CEP</a>
+            <a href="/crawler" class="btn btn-secondary">Crawler de Links</a>
+        </nav>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

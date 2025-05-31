@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Verificar Status de um Site</h2>
+<form method="post">
+    <div class="form-group">
+        <label for="url">URL:</label>
+        <input type="text" class="form-control" id="url" name="url" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Verificar</button>
+</form>
+{% if result %}
+    <div class="mt-4 alert alert-info">{{ result }}</div>
+{% endif %}
+{% endblock %}
